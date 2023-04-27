@@ -1,11 +1,12 @@
 import {useState} from "react";
+import {Navigate, useParams} from "react-router-dom";
 import axios from "axios";
 import PhotosUploader from "../components/PhotosUploader";
 import Perks from "../components/Perks";
 import AccountNav from "../components/AccountNav";
-import {Navigate} from "react-router-dom";
 
 export default function PlacesFormPage() {
+    const {id} = useParams();
     const [title, setTitle] = useState('');
     const [address, setAddress] = useState('');
     const [addedPhotos, setAddedPhotos] = useState([]);
